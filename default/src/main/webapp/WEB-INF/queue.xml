@@ -1,0 +1,41 @@
+<queue-entries>
+    <total-storage-limit>1T</total-storage-limit>
+    <queue>
+        <name>default</name>
+        <target>default</target>
+        <rate>5/s</rate>
+    </queue>
+
+    <queue>
+        <name>file</name>
+        <rate>5/s</rate>
+        <target>file</target>
+        <max-concurrent-requests>3</max-concurrent-requests>
+    </queue>
+
+    <queue>
+        <name>reports</name>
+        <rate>10/s</rate>
+        <target>reports</target>
+    </queue>
+
+    <queue>
+        <name>columnUpdate</name>
+        <rate>10/s</rate>
+        <target>reports</target>
+    </queue>
+
+    <queue>
+        <name>action</name>
+        <rate>5/s</rate>
+        <target>action</target>
+        <max-concurrent-requests>1</max-concurrent-requests>
+    </queue>
+
+    <queue>
+        <name>feed</name>
+        <rate>5/s</rate>
+        <target>feed</target>
+    </queue>
+
+</queue-entries>

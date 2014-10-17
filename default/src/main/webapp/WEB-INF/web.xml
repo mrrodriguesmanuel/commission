@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+    <!-- Default page to serve -->
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+    <listener>
+        <listener-class>com.essence.core.vos.StartupListener</listener-class>
+    </listener>
+
+
+    <error-page>
+        <!-- Missing login -->
+        <error-code>401</error-code>
+        <location>/general-error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Forbidden directory listing -->
+        <error-code>403</error-code>
+        <location>/general-error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Forbidden directory listing -->
+        <error-code>404</error-code>
+        <location>/general-error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Uncaught exception -->
+        <error-code>500</error-code>
+        <location>/general-error.jsp</location>
+    </error-page>
+    <error-page>
+        <!-- Unsupported servlet method -->
+        <error-code>503</error-code>
+        <location>/general-error.jsp</location>
+    </error-page>
+
+    <!-- config -->
+    <session-config>
+        <session-timeout>30</session-timeout>
+    </session-config>
+
+    <!-- Services -->
+    <servlet>
+        <servlet-name>assetServlet</servlet-name>
+        <servlet-class>com.essence.controller.assets.AssetController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>assetServlet</servlet-name>
+        <url-pattern>/a/</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>assetServlet</servlet-name>
+        <url-pattern>/a</url-pattern>
+    </servlet-mapping>
+
+    <!-- Filters -->
+
+    <!--<filter>-->
+        <!--<filter-name>appstats</filter-name>-->
+        <!--<filter-class>com.google.appengine.tools.appstats.AppstatsFilter</filter-class>-->
+        <!--<init-param>-->
+            <!--<param-name>calculateRpcCosts</param-name>-->
+            <!--<param-value>true</param-value>-->
+        <!--</init-param>-->
+        <!--<init-param>-->
+            <!--<param-name>logMessage</param-name>-->
+            <!--<param-value>Appstats available: /appstats/details?time={ID}</param-value>-->
+        <!--</init-param>-->
+    <!--</filter>-->
+    <!--<filter-mapping>-->
+        <!--<filter-name>appstats</filter-name>-->
+        <!--<url-pattern>/*</url-pattern>-->
+    <!--</filter-mapping>-->
+
+    <filter>
+        <filter-name>loginFilter</filter-name>
+        <filter-class>com.essence.servlets.ServletFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>loginFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>ObjectifyFilter</filter-name>
+        <filter-class>com.googlecode.objectify.ObjectifyFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>ObjectifyFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>asyncCacheFilter</filter-name>
+        <filter-class>com.googlecode.objectify.cache.AsyncCacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>asyncCacheFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>Htmleasy</filter-name>
+        <filter-class>
+            com.googlecode.htmleasy.HtmleasyFilterDispatcher
+        </filter-class>
+        <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.essence.TechEssence</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>Htmleasy</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <!--<servlet>-->
+        <!--<servlet-name>appstats</servlet-name>-->
+        <!--<servlet-class>com.google.appengine.tools.appstats.AppstatsServlet</servlet-class>-->
+    <!--</servlet>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>appstats</servlet-name>-->
+        <!--<url-pattern>/appstats/*</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<security-constraint>-->
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>appstats</web-resource-name>-->
+            <!--<url-pattern>/appstats/*</url-pattern>-->
+        <!--</web-resource-collection>-->
+        <!--<auth-constraint>-->
+            <!--<role-name>admin</role-name>-->
+        <!--</auth-constraint>-->
+    <!--</security-constraint>-->
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>cron</web-resource-name>
+            <url-pattern>/cron/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>admin</web-resource-name>
+            <url-pattern>/admin/*</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+</web-app>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cronentries>
+    <cron>
+        <url>/feed-queue/actionMessage/</url>
+        <description>check for leads to deliver every 1 minute</description>
+        <schedule>every 1 minutes</schedule>
+        <target>feed</target>
+    </cron>
+
+    <cron>
+        <url>/report-queue/invoice/</url>
+        <description>Summarise the last 14 days for each company</description>
+        <schedule>every monday 08:00</schedule>
+        <target>reports</target>
+    </cron>
+
+    <cron>
+        <url>/cron/breakClause/</url>
+        <description>Check for IOs that should be paused</description>
+        <schedule>every 60 minutes</schedule>
+        <target>default</target>
+    </cron>
+
+    <cron>
+        <url>/file-queue/processFiles/</url>
+        <description>Process suppressions and scrubs</description>
+        <schedule>every 4 hours</schedule>
+        <target>file</target>
+    </cron>
+
+    <cron>
+        <url>/cron/emailReports</url>
+        <description>send out email report</description>
+        <schedule>every day 07:00</schedule>
+        <timezone>UTC</timezone>
+        <target>default</target>
+    </cron>
+
+    <cron>
+        <url>/cron/csvDelivery</url>
+        <description>send out email report</description>
+        <schedule>every day 07:00</schedule>
+        <timezone>UTC</timezone>
+        <target>default</target>
+    </cron>
+
+    <cron>
+        <description>Backup</description>
+        <url>/_ah/datastore_admin/backup.create?name=BackupToCloud&amp;kind=Action&amp;kind=NonAction&amp;kind=SellerAction&amp;kind=ActionType&amp;kind=Campaign&amp;kind=Company&amp;kind=User&amp;kind=Email&amp;kind=Telephone&amp;kind=Technology&amp;kind=Name&amp;kind=Address&amp;kind=Nationality&amp;kind=Payment&amp;kind=InsertionOrder&amp;kind=Invoice&amp;kind=Consumer&amp;filesystem=gs&amp;gs_bucket_name=staticbackup</url>
+        <schedule>every monday 03:00</schedule>
+        <target>ah-builtin-python-bundle</target>
+    </cron>
+
+</cronentries>

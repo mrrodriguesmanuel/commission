@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<datastore-indexes autoGenerate="true">
+
+    <!-- SELLERACTION INDEXES -->
+    <datastore-index kind="SellerAction" ancestor="true" source="manual">
+        <property name="seller" direction="asc"/>
+        <property name="deleted" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="SellerAction" ancestor="true" source="manual">
+        <property name="deleted" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ConsumerDelivery" ancestor="true" source="manual">
+        <property name="lastModified" direction="asc"/>
+    </datastore-index>
+
+    <!-- CONSUMERDELIVERY -->
+    <datastore-index kind="ConsumerDelivery" ancestor="false" source="manual">
+        <property name="feed" direction="asc"/>
+        <property name="lastModified" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ConsumerDelivery" ancestor="false" source="manual">
+        <property name="feed" direction="asc"/>
+        <property name="status" direction="asc"/>
+        <property name="lastModified" direction="asc"/>
+    </datastore-index>
+
+    <!-- REPORTCOLUMNDATA INDEXES -->
+    <datastore-index kind="ReportColumnData" ancestor="true" source="manual">
+        <property name="dateType" direction="asc"/>
+        <property name="proxy" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ReportColumnData" ancestor="false" source="manual">
+        <property name="column" direction="asc"/>
+        <property name="dateType" direction="asc"/>
+        <property name="proxy" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ReportColumnData" ancestor="true" source="manual">
+        <property name="dateType" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ReportColumnData" ancestor="false" source="manual">
+        <property name="column" direction="asc"/>
+        <property name="dateType" direction="asc"/>
+        <property name="proxy" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ReportColumnData" ancestor="false" source="manual">
+        <property name="column" direction="asc"/>
+        <property name="dateType" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="ReportColumnData" ancestor="false" source="manual">
+        <property name="dateType" direction="asc"/>
+        <property name="proxy" direction="asc"/>
+        <property name="date" direction="asc"/>
+    </datastore-index>
+
+    <!-- NON ACTION INDEXES -->
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc" />
+        <property name="field" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="reason" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc" />
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc" />
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc" />
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc" />
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="actionType" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="campaign" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="released" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="lastModified" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="reason" direction="asc"/>
+        <property name="released" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="released" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="released" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="NonAction" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <!-- ACTION INDEXES -->
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+        <property name="telephone" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="lastModified" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="originalActionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="scrubbed" direction="asc"/>
+        <property name="sellerAction" direction="asc"/>
+        <property name="sellerActionProxy" direction="asc"/>
+        <property name="originalActionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="scrubbed" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="email" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="email" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="telephone" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="telephone" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="work" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="work" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="mobile" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="mobile" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="postcode" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="postcode" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="ipAddress" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="ipAddress" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="consumer" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="consumer" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="actionType" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+    <datastore-index kind="Action" ancestor="false" source="manual">
+        <property name="campaign" direction="asc"/>
+        <property name="actionDate" direction="asc"/>
+    </datastore-index>
+
+</datastore-indexes>

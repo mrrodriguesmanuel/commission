@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/application_5.xsd" version="5">
+    <description>Marketing Town</description>
+    <display-name>Marketing Town</display-name>
+
+    <module>
+        <web>
+            <web-uri>default-1.0-SNAPSHOT.war</web-uri>
+            <context-root>default</context-root>
+        </web>
+    </module>
+    <module>
+        <web>
+            <web-uri>action-war-1.0-SNAPSHOT.war</web-uri>
+            <context-root>action</context-root>
+        </web>
+    </module>
+
+    <module>
+        <web>
+            <web-uri>file-war-1.0-SNAPSHOT.war</web-uri>
+            <context-root>file</context-root>
+        </web>
+    </module>
+
+    <module>
+        <web>
+            <web-uri>reports-war-1.0-SNAPSHOT.war</web-uri>
+            <context-root>reports</context-root>
+        </web>
+    </module>
+
+    <module>
+        <web>
+            <web-uri>feed-war-1.0-SNAPSHOT.war</web-uri>
+            <context-root>feed</context-root>
+        </web>
+    </module>
+
+    <library-directory>lib</library-directory>
+</application>

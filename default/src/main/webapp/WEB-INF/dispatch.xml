@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dispatch-entries>
+    <dispatch>
+        <url>*/action</url>
+        <module>action</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/redirect/*</url>
+        <module>action</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/aditus/*</url>
+        <module>action</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/file/*</url>
+        <module>file</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/file-queue/*</url>
+        <module>file</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/report-queue/*</url>
+        <module>reports</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/download</url>
+        <module>file</module>
+    </dispatch>
+
+    <dispatch>
+        <url>*/feed-queue/*</url>
+        <module>feed</module>
+    </dispatch>
+
+</dispatch-entries>
