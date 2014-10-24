@@ -8,8 +8,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <appengine.target.version>1.9.10</appengine.target.version>
-        <appengine.maven.version>1.9.9</appengine.maven.version>
+        <appengine.target.version>1.9.12</appengine.target.version>
+        <appengine.maven.version>1.9.9-maven3.2.3</appengine.maven.version>
     </properties>
 
     <build>
@@ -32,6 +32,11 @@
                             <artifactId>surefire-junit4</artifactId>
                             <version>2.12.4</version>
                         </dependency>
+                        <dependency>
+					      <groupId>com.googlecode.objectify</groupId>
+					      <artifactId>objectify</artifactId>
+					      <version>5.1.1</version>
+    					</dependency>
                     </dependencies>
                     <configuration>
                         <redirectTestOutputToFile>true</redirectTestOutputToFile>
@@ -60,7 +65,7 @@
                 <plugin>
                     <groupId>com.google.appengine</groupId>
                     <artifactId>appengine-maven-plugin</artifactId>
-                    <version>${appengine.maven.version}</version>
+                    <version>${appengine.target.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>

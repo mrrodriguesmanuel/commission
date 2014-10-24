@@ -179,7 +179,7 @@
         </dependency>
 
     </dependencies>
-    <artifactId>action-war</artifactId>
+    <artifactId>attendance-war</artifactId>
 
     <parent>
         <groupId>com.essence</groupId>
